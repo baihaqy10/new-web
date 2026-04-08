@@ -10,7 +10,7 @@ app.get('/api/info', (req, res) => {
         hostname: os.hostname(),
         platform: os.platform(),
         uptime: os.uptime(),
-        message: "Hello dari OpenShift Cluster!"
+        message: "Hello from OpenShift Cluster!"
     });
 });
 
