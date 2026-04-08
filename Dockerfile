@@ -1,20 +1,13 @@
-# Menggunakan Red Hat Universal Base Image (UBI) untuk keamanan
-FROM registry.access.redhat.com/ubi8/nodejs-18:latest
+FROM image-registry.openshift-image-registry.svc:5000/openshift/nodejs:18-ubi8
 
-# Set working directory
 WORKDIR /opt/app-root/src
 
-# Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+RUN npm install --production
 
-# Copy source code
 COPY . .
 
-# Ekspos port aplikasi
 EXPOSE 8080
 
-# Jalankan aplikasi
 CMD ["npm", "start"]

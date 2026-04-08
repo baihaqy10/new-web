@@ -1,0 +1,13 @@
+{
+  "name": "ocp-web-app",
+  "version": "1.0.0",
+  "description": "Aplikasi web menarik untuk OpenShift",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "os": "^0.1.2"
+  }
+}
